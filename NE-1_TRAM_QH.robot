@@ -126,7 +126,7 @@ TRAMQH_Nhap form them tram QH
     Wait ajax complete
     ${building_code}=    Get Text    xpath=//*[@id="example1"]/tbody/tr/td[2]
     Log    ${building_code}
-    Double Click Element    xpath=//*[@id="example1"]/tbody/tr/td[2]
+    Double Click Element    xpath=//*[@id="example1"]/tbody/tr
     Select Window
     Select From List By Index    id=qhTinhId    1
     Input Text    id=maQh    ${TEN_TRAM_QH}
