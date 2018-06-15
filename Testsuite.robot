@@ -1,13 +1,13 @@
 *** Settings ***
 Suite Setup       Login VNPT ID to RIMS (test_rims)
-Suite Teardown    Close Browser
 Library           SeleniumLibrary
 Resource          ADM-3_PHANQUYEN.robot
-Resource          NE-1_TRAM_QH.robot
+Resource          NE-1_TRAM_QH.robot    #Suite Teardown    Close Browser
 Resource          ADM-1_QLYUSER.robot
 Resource          NE-3_ONAIR_TRAM.robot
 Resource          NE-0_Quy_hoach_tram.robot
 Resource          NE-3_ONAIR_CELL.robot
+Resource          NE_12_Testcase_CoreCS_HLR.robot
 
 *** Variables ***
 
@@ -90,5 +90,11 @@ NE-11_Testcase_Update_tram_QH_excel_NETx
 NE-11_Testcase_Clear_tram_QH_data_test
     [Tags]    tramqh    ne_11_clear
     TRAMQH_Clear test data tram QH
+
+NE_12_Testcase_CoreCS_HLR
+    [Tags]    ne_12_hlr
+    Them moi hlr
+    update_hlr
+    delete_hlr    ${HLR_NEW_NAME}
 
 *** Keywords ***
