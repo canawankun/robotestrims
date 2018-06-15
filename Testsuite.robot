@@ -1,8 +1,9 @@
 *** Settings ***
 Suite Setup       Login VNPT ID to RIMS (test_rims)
+Suite Teardown    Close Browser
 Library           SeleniumLibrary
 Resource          ADM-3_PHANQUYEN.robot
-Resource          NE-1_TRAM_QH.robot    #Suite Teardown    Close Browser
+Resource          NE-1_TRAM_QH.robot
 Resource          ADM-1_QLYUSER.robot
 Resource          NE-3_ONAIR_TRAM.robot
 Resource          NE-0_Quy_hoach_tram.robot
